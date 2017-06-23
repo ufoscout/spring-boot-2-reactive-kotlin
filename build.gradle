@@ -1,7 +1,8 @@
 buildscript {
 	ext {
 		kotlinVersion = '1.1.2'
-		springBootVersion = '2.0.0.M1'
+		kotlinCoroutinesVersion = '0.16'
+		springBootVersion = '2.0.0.M2'
 	}
 	repositories {
 		mavenCentral()
@@ -45,8 +46,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-webflux')
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
-	compile("org.jetbrains.kotlinx:kotlinx-coroutines-core:0.15")
-	compile("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:0.15")
+	compile("org.jetbrains.kotlinx:kotlinx-coroutines-core:${kotlinCoroutinesVersion}")
+	compile("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:${kotlinCoroutinesVersion}")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
 }
