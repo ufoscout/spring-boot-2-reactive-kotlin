@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		kotlinVersion = '1.1.2'
+		kotlinVersion = '1.1.3-2'
 		kotlinCoroutinesVersion = '0.16'
 		springBootVersion = '2.0.0.M2'
 	}
@@ -48,6 +48,7 @@ dependencies {
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 	compile("org.jetbrains.kotlinx:kotlinx-coroutines-core:${kotlinCoroutinesVersion}")
 	compile("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:${kotlinCoroutinesVersion}")
+	compile("org.jetbrains.kotlinx:kotlinx-coroutines-rx2:${kotlinCoroutinesVersion}")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
 }
