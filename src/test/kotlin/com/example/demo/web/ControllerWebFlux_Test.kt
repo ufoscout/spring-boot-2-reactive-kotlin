@@ -33,7 +33,7 @@ class ControllerWebFlux_Test {
                 .uri("/webflux")
                 .exchange()
                 .expectStatus().isAccepted()
-                .expectBody<String>(ControllerWebFlux.MESSAGE)
+                .expectBody<String>(Controller.MESSAGE)
 
     }
      */
@@ -41,5 +41,5 @@ class ControllerWebFlux_Test {
     @Test
     fun testDoNothing() {
     }
-    
+
 }
