@@ -6,12 +6,16 @@ import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
-@Controller
+@RestController
 class Controller {
 
-    @GetMapping("/")
+    @GetMapping("/hello")
     fun helloWorld() = mono (Unconfined) {
-        "Hello from Spring boot and coroutines"
+        MESSAGE
+    }
+
+    companion object {
+        val MESSAGE = "Hello from reactive spring"
     }
 
 }
